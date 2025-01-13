@@ -1,1 +1,7 @@
 body {background-color: #292c31;}
+
+.serie {
+    position: absolute;
+    top: 1rem; left: 1rem;
+    width: 40vw;
+}
