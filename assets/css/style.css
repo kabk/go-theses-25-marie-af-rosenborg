@@ -94,6 +94,11 @@ div:has( > .back) {
   display: block;
   position:relative;
   margin: auto;
+  /* border-radius: 5%; */
+  /* border: ridge; */
+  border: groove;
+  border-width: 2px 4px;
+  border-radius: 40px;
 }
 
 /* .img-left {
