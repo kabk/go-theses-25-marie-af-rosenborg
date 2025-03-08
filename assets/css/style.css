@@ -10,16 +10,32 @@
   to generate your own font for the web from .ttf or .oft files 
 */
 
-@font-face {
+/* @font-face {
   font-family: 'Apoc';
   src: url('../fonts/Apoc/Apoc-Normal-Trial-Regular.woff2') format('woff2'),
       url('../fonts/Apoc/Apoc-Normal-Trial-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+} */
+
+@font-face {
+  font-family: 'Apoc';
+  src: url('../fonts/Apoc/ApocNormal-Regular.woff2') format('woff2'),
+      url('../fonts/Apoc/ApocNormal-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-
+@font-face {
+  font-family: 'Apoc';
+  src: url('../fonts/Apoc/ApocNormal-RegularItalic.woff2') format('woff2'),
+      url('../fonts/Apoc/ApocNormal-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
 
 /* VARIABLES */
 
@@ -59,11 +75,12 @@ body {
     linear-gradient(180deg, #B87333 0%, #04a99b 51%, #00f0b8 85%);
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
-  width:100%;
+  width: calc( 100% - 20px );
   height:auto;
   overflow-y:auto;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
 }
 
 a {
@@ -80,34 +97,55 @@ div:has( > .back) {
   pointer-events: none;
   z-index: -1;
 }
-/* .back {
-  position: absolute;
-  left: 0;
-  height: 97%;
-  opacity: 20%;
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1.0) 90%, transparent 100%);
-} */
 
 .img {
-  width:50%;
-  height:50%;
+  /* width:50%;
+  height:50%; */
+  width:100%;
   display: block;
   position:relative;
   margin: auto;
-  /* border-radius: 5%; */
-  /* border: ridge; */
   border: groove;
   border-width: 2px 4px;
   border-radius: 40px;
 }
 
+.figcaption {
+    width: 55vw; /* Full width by default */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Add some space between the image and the caption */
+    position: relative;
+    border-radius: 5px;
+    /* bottom: 10;
+    left: 0; */
+    float: left;
+    padding: 10px; /* Optional: add padding for better readability */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: add background color for better readability */
+    opacity: 60%;
+    color: rgb(253, 253, 253); /* Optional: ensure text is visible */
+}
+
+
+/* .vertical {
+  width: unset;
+  height: 40vh;
+} */
+
 /* .img-left {
-  width:15%;
-  height:15%;
+ width:50%;
+  height:50%;
   display: block;
   position:relative;
-  margin: auto;
+  margin-right: auto;
+  border: groove;
+  border-width: 2px 4px;
+  border-radius: 40px;
 } */
+
+figcaption {
+  margin: 0;
+  box-sizing: border-box; 
+}
 
 .parent{
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
@@ -118,20 +156,6 @@ div:has( > .back) {
   position:absolute;
 }
 
-/* figure:hover {
-  opacity: 100%;
-} */
-
-/* figure {
-  margin: 0;
-  box-sizing: border-box; 
-  mix-blend-mode: screen; 
-  opacity: 40%;
-  margin:auto;
-  width: 700px;
-  height: 100px;
-} */
-
 .child{
   background-image: "børsen1.jpg";
   opacity: 70%;
@@ -139,18 +163,14 @@ div:has( > .back) {
   position: relative;
 } 
 
-.answer {
-  width: min(60ch, 100%);
-  margin-inline: auto;
-  line-height: 1.45;
-  text-indent: 5rem;
-}
-
  h1{
   font-size: 5rem;
   margin:50;
-  padding:20;
+  padding:30;
+  padding-top: 35vw;;
+  padding-left: 5vw;
   z-index: 12;
+  color: #ddd;
   position: relative;
 }
 
@@ -160,12 +180,30 @@ h2{
   padding-top: 10vw;
   font-style: italic;
 }
-/*
+
 h3 {
-  
+  padding-inline: 20vw;
+  padding-top: 20vw;
+  font-style: italic;
 }
 
-h4, h5, h6{
+h4 {
+  padding-inline: 20vw;
+  padding-top: 5vw;
+  font-style: italic;
+  font-size: 30px;
+}
+
+h5 {
+  padding-inline: 20vw;
+  padding-top: 15vw;
+  font-style: italic;
+  font-size: 30px;
+}
+
+
+
+/*h6{
 
 }
 */
@@ -177,23 +215,37 @@ h4, h5, h6{
 
 p {
   /* paragraph style */
-  width: min(60ch, 100%);
+  width: min(50ch, 100%);
   margin-inline: auto;
   line-height: 1.45;
-  /* text-indent: 100px; */
+  text-indent: 60px;
   z-index: 1;
 }
 
-.p1 {
-  /* paragraph style */
-  width: min(60ch, 100%);
+.biblio {
+  width: min(90ch, 100%);
   margin-inline: auto;
   line-height: 1.45;
-  color: white;
-  /* text-indent: 100px; */
+  text-indent: 0px;
+  font-size: 80%;
   z-index: 1;
 }
 
+
+/* */
+
+.answer {
+  width: min(50ch, 100%);
+  margin-inline: auto;
+  line-height: 1.45;
+  text-indent: 80px;
+}
+
+.question {
+  width: min(50ch, 100%);
+  margin-inline: auto;
+  line-height: 1.45;
+}
 
 /* PAGE STYLES */
 
@@ -217,15 +269,6 @@ div.page-wrapper {
 .mobile-only {
   display: none;
 }
-/*
-p { */
-  /* margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px; */
-/*} */
-
-
 
 /* WEBSITE MEDIA QUERIES */
 
@@ -294,37 +337,19 @@ p { */
 /* this under is the function navbar */
 
 .navbar { 
-  /* background-color: #333; */
   overflow: hidden; 
   opacity: 80%;
-  position: sticky;  
+  position: fixed;  
   display: flex;
   justify-content: space-between;
   top: 0;  
-  width: 100%;  
+  width: calc( 100% - 20px );  
   z-index: 1000;
 }  
 
-
-/* .navbar { 
-  background-color: silver;
-  background-image: linear-gradient(335deg, rgb(0, 0, 0) 23px, transparent 23px),
-                    linear-gradient(155deg, rgb(0, 0, 0) 23px, transparent 23px),
-                    linear-gradient(335deg, rgb(0, 0, 0) 23px, transparent 23px),
-                    linear-gradient(155deg, rgb(0, 0, 0) 23px, transparent 23px);
-  background-size: 58px 58px;
-  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-  overflow: hidden; 
-  opacity: 80%;
-  position: sticky;  
-  top: 0;  
-  width: 500%;  
-  z-index: 1000;
-}  */
-
 .navbar a { 
   float: left; /* Align links to the left */ 
-  display: block; /* Make links block elements */ 
+  display: block; 
   color: white; /* Text color */ 
   text-align: center; /* Center the text */ 
   padding: 14px 16px; /* Padding */ 
@@ -353,25 +378,6 @@ p { */
   to   { text-shadow: -.1em -.2em .6em #fefcc9, -.15em 0 .6em #feec85, .1em -.25em .6em #ffae34, -.15em -.45em .5em #ec760c, .1em -.5em .6em #cd4606, 0 -.8em .6em #973716, -.2em -1em .8em #451b0e; }
 }
 
-
-/* .element {
-  width: 1rem;
-  height: 1rem;
-  animation: pulse .5s infinite
-  alternate;
-}
-
-@keyframes pulse{
- 0% {
-  background-color: #00f0b8;
-
- }
- 100% {
-  background-attachment: black;
- }
-} */
-
-
 body {
   /* margin-left: auto;
   margin-right: auto; */
@@ -385,23 +391,16 @@ blockquote p {
   margin-right: 40px;
 }
 
-blockquote p1 {
-  width: 55%;
-  margin-right: 40px;
-}
-
 blockquote footer {
   width: 55%;
   text-align: right;
 }
-
 
 section>p,
 section>footer,
 section>table {
   width: 55%;
 }
-
 
 figure {
   padding: 0;
@@ -449,6 +448,7 @@ img {
   /* line-height: 1.3; */
   vertical-align: baseline;
   position: relative;
+ text-indent: 0;
 }
 
 .sidenote,
@@ -465,6 +465,8 @@ img {
 
 .sidenote-number {
   counter-increment: sidenote-counter;
+  text-indent: 0;
+
 }
 
 .sidenote-number:after,
@@ -475,7 +477,8 @@ img {
 
 .sidenote-number:after {
   content: counter(sidenote-counter);
-  font-size: 1rem;
+  font-size: var(--font-size);
+  font-feature-settings: "sups" 1;
   top: -0.5rem;
   left: 0.1rem;
 }
@@ -488,7 +491,7 @@ img {
 
 .sidenote:before {
   content: counter(sidenote-counter) " ";
-  font-size: .8rem;
+  /* font-size: .8rem; */
   top: -0.2rem;
 }
 
@@ -544,14 +547,63 @@ label.margin-toggle:not(.sidenote-number) {
   height: 100%;
 }
 
-
-
-@media (max-width: 779px) {
+@media (max-width: 760px) {
   body {
     width: 84%;
     padding-left: 8%;
     padding-right: 8%;
   }
+
+  .navbar {
+    top: 10px;
+    margin-left: -10px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* position: -webkit-sticky; */
+      }
+    .navbar > em {
+      flex-basis: 30%;
+    }
+    .navbar > a {
+      float:unset;
+      width: 100%;
+    }
+
+      nav {
+        overflow: hidden; 
+        opacity: 80%;
+        position: fixed;  
+        display: flex;
+        justify-content: space-between;
+        top: 0;  
+        width: 80%; 
+        z-index: 1000; 
+      } 
+    
+      .navbar a {
+        font-size: 100%;
+        display: block; 
+        color: white; 
+        text-align: center; 
+        /* padding: 5px -1px; */
+        text-decoration: none;
+      } 
+      
+      .navbar a:hover { 
+        background-color: #ddd; 
+        color: black; 
+      }  
+
+      .content { 
+        padding: 20px; /* Add some padding to the content */ 
+      } 
+
+
+  h1 {
+    font-size: 300%;
+    margin:auto;
+  }    
 
   hr,
   section>p,
@@ -587,7 +639,7 @@ label.margin-toggle:not(.sidenote-number) {
 
   blockquote p,
   blockquote footer {
-    width: 100%;
+    width: 90%;
   }
 
   label.margin-toggle:not(.sidenote-number) {
@@ -628,4 +680,12 @@ label.margin-toggle:not(.sidenote-number) {
   img {
     width: 100%;
   }
+
+  p {
+    text-indent: 10vw;
+  }
+
+  @media (max-width: 779px) {
+  }
+ 
 }
