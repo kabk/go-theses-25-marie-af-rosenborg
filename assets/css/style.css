@@ -346,6 +346,7 @@ div.page-wrapper {
   top: 0;  
   width: calc( 100% - 20px );  
   z-index: 1000;
+  text-indent: 0%;
 }  
 
 .navbar a { 
