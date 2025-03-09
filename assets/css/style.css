@@ -71,12 +71,9 @@ html {
 body {
   position:relative;
   background-color: var(--color-background);
-  /* modified by stefan done*/
   background: 
     url("/assets/images/green-dust-and-scratches.png"), /* Grain Texture */
     linear-gradient(180deg, #B87333 0%, #04a99b 51%, #00f0b8 85%); /* Gradient */
-  /* modified by stefan */
-
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   width: calc( 100% - 20px );
@@ -176,9 +173,8 @@ div:has( > .back) {
 }
 
 h2{
-  /* h2 style */
   padding-inline: 20vw;
-  padding-top: 10vw;
+  padding-top: 5vw;
   font-style: italic;
 }
 
@@ -246,6 +242,11 @@ p {
   width: min(50ch, 100%);
   margin-inline: auto;
   line-height: 1.45;
+}
+
+.foot {
+  font-size: 11px;
+  text-indent: 0px;
 }
 
 /* PAGE STYLES */
@@ -398,6 +399,7 @@ blockquote p {
 
 blockquote footer {
   width: 55%;
+  font-size: smaller;
   text-align: right;
 }
 
@@ -548,7 +550,6 @@ label.margin-toggle:not(.sidenote-number) {
     padding-left: 8%;
     padding-right: 8%;
   }
-/* modified by stefan done*/
 
   .navbar {
     margin-left: -10px;
@@ -558,7 +559,6 @@ label.margin-toggle:not(.sidenote-number) {
     align-items: center;
     font-size: large;
     }
-/* modified by stefan */
 
     .navbar > em {
       flex-basis: 30%;
@@ -596,7 +596,7 @@ label.margin-toggle:not(.sidenote-number) {
       .content { 
         padding: 20px; /* Add some padding to the content */ 
       } 
-/* modified by stefan done*/
+
       .navbar em {
         cursor: pointer;
         padding: 10px;
@@ -623,13 +623,27 @@ label.margin-toggle:not(.sidenote-number) {
         display: block;
     }
 
-/* modified by stefan */
-
 
   h1 {
     font-size: 300%;
     margin:auto;
-  }    
+  }   
+  
+  h2 {
+    text-indent: 0px;
+  }  
+
+  h3 {
+    text-indent: 0px;
+  } 
+  
+  h4 {
+    text-indent: 0px;
+  } 
+  
+  h5 {
+    text-indent: 0px;
+  }  
 
   hr,
   section>p,
