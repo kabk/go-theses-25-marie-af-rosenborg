@@ -112,7 +112,7 @@ div:has( > .back) {
 
 .figcaption {
   width:90%;
-  font-size: 15px;
+  font-size: 11.5px;
   display: block;
   position:relative;
   margin: auto;
@@ -734,4 +734,19 @@ label.margin-toggle:not(.sidenote-number) {
   @media (max-width: 779px) {
   }
  
+}
+
+.subtitle {
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-indent: 0;
+}
+
+h2 + p {
+  text-indent: 0;
+}
+
+.none {
+  text-indent: 0;
 }
