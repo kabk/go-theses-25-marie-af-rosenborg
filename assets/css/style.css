@@ -72,8 +72,8 @@ body {
   position:relative;
   background-color: var(--color-background);
   background: 
-    /* url("https://kabk.github.io/go-theses-25-marie-af-rosenborg/assets/images/green-dust-and-scratches.png"), */
-    url("https://kabk.github.io/go-theses-25-marie-af-rosenborg/assets/images/vintage-rusty-scratched-wall.png"), /* Grain Texture */
+    url("https://kabk.github.io/go-theses-25-marie-af-rosenborg/assets/images/green-dust-and-scratches.png"),
+    /* url("https://kabk.github.io/go-theses-25-marie-af-rosenborg/assets/images/vintage-rusty-scratched-wall.png"), Grain Texture */
     linear-gradient(180deg, #B87333 0%, #04a99b 51%, #00f0b8 85%); /* Gradient */
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
