@@ -551,14 +551,19 @@ label.margin-toggle:not(.sidenote-number) {
 
 /* phone version */
 @media (max-width: 760px) {
+  html {
+/* overflow-y: visible; */
+}
   body {
     width: 84%;
     padding-left: 8%;
     padding-right: 8%;
+    overflow-y: visible;
   }
 
   .navbar {
-    margin-left: -10px;
+    left: 0;
+    /* margin-left: -10px; */
     display: flex; 
     flex-wrap: wrap;
     flex-direction: column;
@@ -573,6 +578,11 @@ label.margin-toggle:not(.sidenote-number) {
       float:unset;
       width: 100%;
     }
+
+    .foot {
+      position: static;
+    } 
+
 
       nav {
         overflow: hidden; 
@@ -595,7 +605,7 @@ label.margin-toggle:not(.sidenote-number) {
       } 
       
       .navbar a:hover { 
-        background-color: #ddd; 
+        background-color: transparent; 
         color: black; 
       }  
 
@@ -615,9 +625,9 @@ label.margin-toggle:not(.sidenote-number) {
         color: white;
     }
     
-    .navbar em:hover {
+    /* .navbar em:hover {
         background-color: rgba(255, 255, 255, 0.2);
-    }
+    } */
     
     /* Hide all chapters except the first one */
     .navbar em:not(:first-child) {
